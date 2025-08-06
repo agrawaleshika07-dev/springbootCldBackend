@@ -1,5 +1,7 @@
 package com.example.cld;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,13 +17,13 @@ public class MessageController {
     }
 
     @PostMapping
-    public String addMessage(@RequestBody String messageContent) {
-        messageService.saveMessage(messageContent);
-        return "Message added";
+    public ResponseEntity<String> createMessage(@RequestBody String content) {
+        messageService.saveMessage(content);
+        return new ResponseEntity<>("Message saved successfully", HttpStatus.CREATED);
     }
 
     @GetMapping
-    public List<String> getAllMessages() {
-        return messageService.getAllMessages();
+    public ResponseEntity<List<String>> getAllMessages() {
+        return ResponseEntity.ok(messageService.getAllMessages());
     }
 }
