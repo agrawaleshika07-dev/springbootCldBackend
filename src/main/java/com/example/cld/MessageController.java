@@ -17,14 +17,13 @@ public class MessageController {
     }
 
     @PostMapping
-    public ResponseEntity<String> createMessage(@RequestBody String content) {
+    public ResponseEntity<String> saveMessage(@RequestBody String content) {
         messageService.saveMessage(content);
         return new ResponseEntity<>("Message saved successfully", HttpStatus.CREATED);
     }
 
     @GetMapping
     public ResponseEntity<List<String>> getAllMessages() {
-        return ResponseEntity.ok(messageService.getAllMessageContents());
+        return ResponseEntity.ok(messageService.getAllMessages());
     }
 }
-
