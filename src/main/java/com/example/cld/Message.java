@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Message {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String content;
@@ -15,10 +15,6 @@ public class Message {
 
     public Message(String content) {
         this.content = content;
-    }
-
-    public Long getId() {
-        return id;
     }
 
     public String getContent() {
