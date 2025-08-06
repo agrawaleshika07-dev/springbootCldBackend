@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ApiController {
 
     @GetMapping("/")
-    public String hello(){
-        return "Hello World";
+    public String hello() {
+        return "Hello from Spring Boot!";
     }
 }
