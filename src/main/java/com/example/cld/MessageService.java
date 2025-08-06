@@ -19,6 +19,8 @@ public class MessageService {
     }
 
     public List<String> getAllMessages() {
-        return messageRepository.findAll().stream().map(Message::getContent).collect(Collectors.toList());
+        return messageRepository.findAll().stream()
+                .map(Message::getContent)
+                .collect(Collectors.toList());
     }
 }
