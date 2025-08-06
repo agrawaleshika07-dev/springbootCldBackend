@@ -17,25 +17,16 @@ public class AwsConfig {
 
     @Bean
     public Ec2Client ec2Client() {
-        return Ec2Client.builder()
-                .region(Region.of(awsRegion))
-                .credentialsProvider(DefaultCredentialsProvider.create())
-                .build();
+        return Ec2Client.builder().region(Region.of(awsRegion)).credentialsProvider(DefaultCredentialsProvider.create()).build();
     }
 
     @Bean
     public S3Client s3Client() {
-        return S3Client.builder()
-                .region(Region.of(awsRegion))
-                .credentialsProvider(DefaultCredentialsProvider.create())
-                .build();
+        return S3Client.builder().region(Region.of(awsRegion)).credentialsProvider(DefaultCredentialsProvider.create()).build();
     }
 
     @Bean
     public SqsClient sqsClient() {
-        return SqsClient.builder()
-                .region(Region.of(awsRegion))
-                .credentialsProvider(DefaultCredentialsProvider.create())
-                .build();
+        return SqsClient.builder().region(Region.of(awsRegion)).credentialsProvider(DefaultCredentialsProvider.create()).build();
     }
 }
