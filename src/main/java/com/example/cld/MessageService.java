@@ -18,7 +18,7 @@ public class MessageService {
         messageRepository.save(new Message(content));
     }
 
-    public List<String> getAllMessages() {
+    public List<String> getAllMessageContents() {
         return messageRepository.findAll().stream().map(Message::getContent).collect(Collectors.toList());
     }
 }
