@@ -15,8 +15,8 @@ public class MessageController {
     }
 
     @PostMapping
-    public void saveMessage(@RequestBody String content) {
-        messageService.saveMessage(content);
+    public void addMessage(@RequestBody String message) {
+        messageService.saveMessage(message);
     }
 
     @GetMapping
