@@ -17,6 +17,10 @@ public class Message {
         this.content = content;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public String getContent() {
         return content;
     }
