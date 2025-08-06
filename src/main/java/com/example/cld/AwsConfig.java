@@ -23,33 +23,27 @@ public class AwsConfig {
     private String awsRegion;
 
     @Bean
-    public AmazonS3 s3Client() {
+    public AmazonS3 amazonS3(){
         return AmazonS3ClientBuilder.standard().withRegion(awsRegion).build();
     }
-
     @Bean
-    public AmazonSNS snsClient() {
-        return AmazonSNSClientBuilder.standard().withRegion(awsRegion).build();
-    }
-
-    @Bean
-    public AmazonEC2 ec2Client() {
+    public AmazonEC2 amazonEC2(){
         return AmazonEC2ClientBuilder.standard().withRegion(awsRegion).build();
     }
-
     @Bean
-    public AWSLambda lambdaClient() {
+    public AmazonSNS amazonSNS(){
+        return AmazonSNSClientBuilder.standard().withRegion(awsRegion).build();
+    }
+    @Bean
+    public AWSLambda awsLambda(){
         return AWSLambdaClientBuilder.standard().withRegion(awsRegion).build();
     }
-
     @Bean
-    public AmazonRDS rdsClient() {
+    public AmazonRDS amazonRDS(){
         return AmazonRDSClientBuilder.standard().withRegion(awsRegion).build();
     }
-
     @Bean
-    public AmazonSQS sqsClient() {
+    public AmazonSQS amazonSQS(){
         return AmazonSQSClientBuilder.standard().withRegion(awsRegion).build();
     }
 }
-
