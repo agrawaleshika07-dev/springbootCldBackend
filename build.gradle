@@ -6,10 +6,7 @@ plugins {
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-
-java {
-    sourceCompatibility = '11'
-}
+sourceCompatibility = '11'
 
 repositories {
     mavenCentral()
@@ -31,4 +28,3 @@ dependencies {
 springBoot {
     mainClass = 'com.example.cld.Main'
 }
-
