@@ -14,13 +14,11 @@ public class MessageService {
         this.messageRepository = messageRepository;
     }
 
-    public void saveMessage(String messageContent) {
-        messageRepository.save(new Message(messageContent));
+    public void saveMessage(String content) {
+        messageRepository.save(new Message(content));
     }
 
     public List<String> getAllMessages() {
-        return messageRepository.findAll().stream()
-                .map(Message::getContent)
-                .collect(Collectors.toList());
+        return messageRepository.findAll().stream().map(Message::getContent).collect(Collectors.toList());
     }
 }
