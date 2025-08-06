@@ -24,6 +24,7 @@ public class MessageController {
 
     @GetMapping
     public ResponseEntity<List<String>> getAllMessages() {
-        return ResponseEntity.ok(messageService.getAllMessages());
+        return ResponseEntity.ok(messageService.getAllMessageContents());
     }
 }
+
