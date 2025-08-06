@@ -18,9 +18,12 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'com.amazonaws:aws-java-sdk-sns:2.7.5'
     implementation 'com.amazonaws:aws-java-sdk-s3:2.7.5'
-    implementation 'com.amazonaws:aws-java-sdk-sqs:2.7.5'
     implementation 'com.amazonaws:aws-java-sdk-ec2:2.7.5'
+    implementation 'com.amazonaws:aws-java-sdk-lambda:2.7.5'
+    implementation 'com.amazonaws:aws-java-sdk-rds:2.7.5'
+    implementation 'com.amazonaws:aws-java-sdk-sqs:2.7.5'
     runtimeOnly 'com.h2database:h2'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
@@ -28,3 +31,4 @@ dependencies {
 springBoot {
     mainClass = 'com.example.cld.Main'
 }
+
